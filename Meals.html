@@ -4,36 +4,34 @@
 <meta charset="UTF-8">
 <title>Meals</title>
 
-<link rel="stylesheet" href="style.css"> <!-- CSS -->
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- JQuery مكتبة مخصصة للجافا -->
+<link rel="stylesheet" href="style.css">
+<script src="myFunctions.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
 <body>
- <div class="background"></div>
-    <body>
-        <header>
 
-<h1> الوجبات</h1> <!-- عنوان رئيسي -->
+<div class="background"></div>
 
-<!-- قائمة التنقل -->
+<header >
+<h1> الوجبات</h1>
 <nav>
 <a href="index.html">الرئيسية</a> 
 <a href="AboutUs.html">من نحن</a> 
 <a href="Meals.html">الوجبات</a>
 </nav>
 </header>
-<section>
-    <h1>مطعم الشام</h1>
-    <p>  🐟 للمأكولات البحرية</p>
-</section>
+
+<center>
+<section style="height: 10%; padding: 0; margin: 10px;">
+<h1>مطعم الشام</h1>
+<p> 🐟 للمأكولات البحرية</p>
+</section></center>
 
 
-
-<table border="1" dir="rtl"> <!-- جدول -->
+<table border="1" dir="rtl">
 <tr>
-
 <th>الرمز</th>
 <th>اسم الوجبة</th>
 <th>السعر</th>
@@ -41,56 +39,74 @@
 <th>اختيار</th>
 </tr>
 
-<!-- وجبة 1 -->
+<!-- ================== وجبة 1 ================== -->
 <tr>
 <td>SF-001</td>
 <td> وجبة سمك بوري مشوي لشخصين</td>
 <td> ل.س110000</td>
 <td align="center">
-<button onclick="toggleDetails('d1')">التفاصيل</button> <!-- زر التفاصيل -->
+<button onclick="toggleDetails('d1')">التفاصيل</button>
 </td>
-<td><input type="checkbox" class="meal" value="110000"></td> <!-- اختيار -->
+
+<td>
+<button class="qty-btn" onclick="changeQty(this,-1)">-</button>
+<span class="qty">0</span>
+<button class="qty-btn" onclick="changeQty(this,1)">+</button>
+<span class="price" style="display:none;">110000</span>
+</td>
 </tr>
+
 <tr id="d1" style="display:none;">
 <td colspan="5">
-<pre>المطبخ: المصري  .
-    
- <img src="صور/وجبة 1.jpg" >   
+<pre>
+المطبخ: المصري . 
+
+<img src="صور/وجبة 1.jpg">
 
 تصنيف الطعام : مأكوالت بحرية  
 📝 المكونات:  
- 4 سمكات بوري أحمر، مغسول ومنظف.  
- بضعة أوراق من األوريجانو الطازج، مقطعة. 
- 1 ملعقة صغيرة من ملح الطعام. 
- 1 ملعقة صغيرة من الفلفل األسود المطحون. 
- الصلصة:
- 1 ملعقة كبيرة من زيت الزيتون.  
- 3 فصوص ثوم مقشرة ومقطعة بشكل ناعم. 
- 1 حبة فلفل أحمر طازج، منزوعة البذور ومقطعة إلى شرائح رفيعة.  
- بضعة أغصان من إكليل الجبل الطازجة. 
- 6 حبات طماطم طرية، مفرومة. 
- نص ليمونة معصورة.  
- ضمة صغيرة من البقدونس الطازج المفروم.</pre></td>
+4 سمكات بوري أحمر، مغسول ومنظف.  
+بضعة أوراق من األوريجانو الطازج، مقطعة. 
+1 ملعقة صغيرة من ملح الطعام. 
+1 ملعقة صغيرة من الفلفل األسود المطحون. 
+
+الصلصة:
+1 ملعقة كبيرة من زيت الزيتون.  
+3 فصوص ثوم مقشرة ومقطعة بشكل ناعم. 
+1 حبة فلفل أحمر طازج، منزوعة البذور ومقطعة إلى شرائح رفيعة.  
+بضعة أغصان من إكليل الجبل الطازجة. 
+6 حبات طماطم طرية، مفرومة. 
+نص ليمونة معصورة.  
+ضمة صغيرة من البقدونس الطازج المفروم.
+
+</pre>
+</td>
 </tr>
 
-
-
-
-<!-- وجبة 2 -->
+<!-- ================== وجبة 2 ================== -->
 <tr>
 <td>SF-002</td>
 <td> وجبة روبيان مقلي</td>
 <td> ل.س140000</td>
 <td align="center">
-<button onclick="toggleDetails('d2')">التفاصيل</button> <!-- زر التفاصيل -->
+<button onclick="toggleDetails('d2')">التفاصيل</button>
 </td>
-<td><input type="checkbox" class="meal" value="110000"></td> <!-- اختيار -->
+
+<td>
+<button class="qty-btn" onclick="changeQty(this,-1)">-</button>
+<span class="qty">0</span>
+<button class="qty-btn" onclick="changeQty(this,1)">+</button>
+<span class="price" style="display:none;">140000</span>
+</td>
 </tr>
+
 <tr id="d2" style="display:none;">
 <td colspan="5">
-<pre> المطبخ: الآسيوي.
+<pre>
+ المطبخ: الآسيوي.
 
-<img src="صور/وجبة 2.jpg" >
+ <img src="صور/وجبة 2.jpg">
+
 تصنيف الطعام: مأكولات بحرية.
 📝 المكونات:
  الروبيان:500 غرام روبيان مقشر.
@@ -98,32 +114,40 @@
 1 بيضة.
 1 ملعقة صغيرة ملح.
 1 ملعقة صغيرة فلفل.
- الصلصة:
+
+الصلصة:
 2 ملعقة كبيرة صوص صويا.
 1 ملعقة كبيرة عسل.
 1 ملعقة صغيرة ثوم مفروم.
-عصير ليمون .            
-</pre></td>
+عصير ليمون .
+
+</pre>
+</td>
 </tr>
 
-
-
-
-<!-- وجبة 3 -->
+<!-- ================== وجبة 3 ================== -->
 <tr>
 <td>SF-003</td>
 <td> وجبة كلماري مقلي  </td>
 <td> ل.س95000</td>
 <td align="center">
-<button onclick="toggleDetails('d3')">التفاصيل</button> <!-- زر التفاصيل -->
+<button onclick="toggleDetails('d3')">التفاصيل</button>
 </td>
-<td><input type="checkbox" class="meal" value="110000"></td> <!-- اختيار -->
+
+<td>
+<button class="qty-btn" onclick="changeQty(this,-1)">-</button>
+<span class="qty">0</span>
+<button class="qty-btn" onclick="changeQty(this,1)">+</button>
+<span  class="price" style="display:none;">95000</span>
+</td>
 </tr>
+
 <tr id="d3" style="display:none;">
 <td colspan="5">
-<pre> المطبخ: الإيطالي.
+<pre>
+ المطبخ: الإيطالي.
 
-<img src="صور/وجبة 3.jpg" >
+ <img src="صور/وجبة 3.jpg">
 
 تصنيف الطعام: مأكولات بحرية.
 📝 المكونات:
@@ -131,208 +155,119 @@
 1 كوب طحين.
 1 ملعقة صغيرة ملح.
 1 ملعقة صغيرة فلفل.
- الصلصة:  
+
+الصلصة:  
 عصير ليمون.
 مايونيز.
-ثوم مفروم.   </pre></td>
+ثوم مفروم.
+
+</pre>
+</td>
 </tr>
 
-
-
-
-<!-- وجبة 4 -->
+<!-- ================== وجبة 4 ================== -->
 <tr>
 <td>SF-004</td>
 <td>   وجبة سمك فيليه مقلي </td>
 <td> ل.س130000</td>
 <td align="center">
-<button onclick="toggleDetails('d4')">التفاصيل</button> <!-- زر التفاصيل -->
+<button onclick="toggleDetails('d4')">التفاصيل</button>
 </td>
-<td><input type="checkbox" class="meal" value="110000"></td> <!-- اختيار -->
+
+<td>
+<button class="qty-btn" onclick="changeQty(this,-1)">-</button>
+<span class="qty">0</span>
+<button class="qty-btn" onclick="changeQty(this,1)">+</button>
+<span class="price" style="display:none;">130000</span>
+</td>
 </tr>
+
 <tr id="d4" style="display:none;">
 <td colspan="5">
-<pre>المطبخ: العالمي  .
+<pre>
+المطبخ: العالمي  .
     
- <img src="صور/وجبة 4.jpg" >   
-   
+<img src="صور/وجبة 4.jpg">
+
 تصنيف الطعام: مأكولات بحرية.
 📝 المكونات:
  السمك:4 قطع فيليه سمك.
 1 كوب بقسماط.
 1 بيضة.
 ملح وفلفل.
- الصلصة:
+
+الصلصة:
 مايونيز.
 كاتشب.
 عصير ليمون.
-   </pre></td>
+
+</pre>
+</td>
 </tr>
 
-
-
-
-<!-- وجبة 5 -->
+<!-- ================== وجبة 5 ================== -->
 <tr>
 <td>SF-005</td>
 <td>  سمك مشوي بالليمون    </td>
 <td> ل.س140000</td>
 <td align="center">
-<button onclick="toggleDetails('d5')">التفاصيل</button> <!-- زر التفاصيل -->
+<button onclick="toggleDetails('d5')">التفاصيل</button>
 </td>
-<td><input type="checkbox" class="meal" value="110000"></td> <!-- اختيار -->
+<td>
+<button class="qty-btn" onclick="changeQty(this,-1)">-</button>
+<span class="qty">0</span>
+<button class="qty-btn" onclick="changeQty(this,1)">+</button>
+<span class="price" style="display:none;">140000</span>
+</td>
 </tr>
+
 <tr id="d5" style="display:none;">
 <td colspan="5">
-<pre>المطبخ: المتوسطي  .
+<pre>
+المطبخ: المتوسطي  .
     
- <img src="صور/وجبة 5.jpg">   
-                 
- 📝 المكونات:
+<img src="صور/وجبة 5.jpg">
+
+📝 المكونات:
  السمك:2 سمكة كاملة (دنيس أو قاروص) منظفة.
 2 ملعقة كبيرة عصير ليمون.
 2 ملعقة كبيرة زيت زيتون.
 1 ملعقة صغيرة ملح.
 1 ملعقة صغيرة فلفل أسود.
 2 فص ثوم مفروم.
- الصلصة:
+
+الصلصة:
 1 ملعقة كبيرة زيت زيتون.
 عصير نصف ليمونة.
 بقدونس مفروم.
 رشة ملح.
-  </pre></td>
-</tr>
 
+</pre>
+</td>
+</tr>
 
 </table>
 
-
-
-
 <!-- زر متابعة -->
-<center><button onclick="showForm()"  class="button">متابعة</button>
-
-<!-- نموذج -->
+<center>
+<button onclick="showForm()" class="button">متابعة</button>
 <div id="formDiv" style="display:none;">
-
 <h2>نموذج الطلب</h2>
-
 <form onsubmit="return validateForm()">
-
 <input type="text" id="name" placeholder="الاسم الكامل"><br>
-
-<input type="number" id="nid" placeholder="الرقم الوطني"><br>
-
-<input type="text"  placeholder="dd-mm-yyyy"><br>
-
-<input type="number"  placeholder="رقم الموبايل"><br>
-
-<input type="email" placeholder="الإيميل"><br>
-
-<button type="submit" class="button" style="width: 100%;">إرسال</button>
-
+<input type="number" id="nid" placeholder="الرقم الوطني" oninput="detectProvince()"><br>
+<span id="province" style="color:green;"></span><br>
+<input type="text" id="address" placeholder="موقعك بالتفصيل"><br>
+<input type="text" id="phone" placeholder="رقم الموبايل"><br>
+<input type="date" id="date" ><br>
+<input type="email" id="email" placeholder="الإيميل"><br>
+<button type="submit" class="button" style="width:100%;">إرسال</button>
 </form>
-
 </div>
 </center>
 
 
 
-
-
-
-<script>
-
-// متغير لحفظ السعر الكلي
-let total = 0; // مجموع الأسعار
-
-
-// زر المتابعة (التحقق من اختيار وجبة)
-function showForm(){
-
-    let meals = document.querySelectorAll(".meal:checked"); // جلب كل الوجبات المختارة
-
-    if(meals.length === 0){ // إذا ما في أي وجبة مختارة
-        alert("❌ يجب اختيار وجبة واحدة على الأقل"); // تنبيه للمستخدم
-        return; // إيقاف تنفيذ الدالة
-    }
-
-    document.getElementById("formDiv").style.display = "block"; // إظهار الفورم
-}
-
-
-// إظهار/إخفاء التفاصيل
-function toggleDetails(id){
-
-    let row = document.getElementById(id); // جلب الصف حسب id
-
-    if(row.style.display === "none"){
-        row.style.display = "table-row"; // إظهار التفاصيل
-    } else {
-        row.style.display = "none"; // إخفاء التفاصيل
-    }
-}
-
-
-// التحقق + الحساب + عرض النتيجة
-function validateForm(){
-
-    let name = document.getElementById("name").value; // جلب الاسم
-    let nid = document.getElementById("nid").value; // جلب الرقم الوطني
-
-    let meals = document.querySelectorAll(".meal:checked"); // الوجبات المختارة
-
-    // تحقق الاسم (حروف عربية فقط)
-    let nameRegex = /^[أ-ي ]+$/;
-    if(!nameRegex.test(name)){
-        alert("❌  الاسم غير صحيح, تحقق من كتابته بالعربي");
-        return false;
-    }
-
-    // تحقق الرقم الوطني (11 رقم فقط)
-    let nidRegex = /^[0-9]{11}$/;
-    if(!nidRegex.test(nid)){
-        alert("❌ الرقم الوطني يجب أن يكون 11 رقم");
-        return false;
-    }
-
-    total = 0; // تصفير السعر
-
-    let selectedMeals = ""; // تخزين أسماء الوجبات
-
-    // حساب السعر وجمع الوجبات
-    meals.forEach(function(meal){
-
-        total += parseInt(meal.value); // جمع السعر
-
-        // استخراج اسم الوجبة من الجدول
-        let mealName = meal.parentElement.parentElement.children[1].innerText;
-
-        selectedMeals += "- " + mealName + "\n"; // إضافة الاسم للقائمة
-    });
-
-    // حساب الخصم
-    let discount = total * 0.05; // خصم 5%
-    let finalTotal = total - discount; // السعر النهائي
-
-    // رسالة النتيجة
-    alert(
-        "✅ تم الإرسال بنجاح\n\n" +
-        "👤 الاسم: " + name + "\n" +
-        "🆔 الرقم الوطني: " + nid + "\n\n" +
-        "🍽️ الوجبات المختارة:\n" + selectedMeals + "\n" +
-        "💰 قبل الخصم: " + total + "\n" +
-        "🎁 الخصم (5%): " + discount + "\n" +
-        "💵 بعد الخصم: " + finalTotal
-    );
-
-    // 🔥 بعد الضغط على OK يتم إعادة تحميل الصفحة
-    location.reload(); // إعادة تحديث الصفحة
-
-    return false; // منع إعادة تحميل تلقائي من الفورم
-}
-
-</script>
 
 </body>
 </html>
