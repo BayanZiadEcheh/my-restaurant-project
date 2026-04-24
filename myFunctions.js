@@ -166,33 +166,9 @@ function validateForm(){
         return false;
     }
     
-   // if(address.trim() === ""){
-     //   alert("❌  الموقع مطلوب");
-    //    return false;
-   // }
-
-   // phone = phone.trim().replace(/\s/g, "");
-
-   // if(phone === ""){
-   //     alert("❌ رقم الموبايل مطلوب");
-   //     return false;
-//}
-
-   // if(!/^[0-9]{10}$/.test(phone)){
-   //     alert("❌ رقم الموبايل يجب أن يكون 10 أرقام ");
-    //    return false;
-   // }
-    
-   // if(date === ""){
-    //    alert("❌التاريخ  مطلوب");
-    //    return false;
+   
         
-   // }
-   // if( email === ""){
-    //    alert("❌  الإيميل مطلوب");
-    //    return false;
-        
-   // }
+  
 
 
 
